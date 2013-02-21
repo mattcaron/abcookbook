@@ -1,6 +1,6 @@
 % \iffalse meta-comment
 %
-% Copyright (C) 2012 by Sven Harder
+% Copyright (C) 2013 by Matthew Caron
 % -----------------------------------
 %
 % This file may be distributed and/or modified under the
@@ -17,17 +17,17 @@
 %
 % \iffalse
 %<package>\NeedsTeXFormat{LaTeX2e}
-%<package>\ProvidesPackage{xcookybooky}
+%<package>\ProvidesPackage{abcookbook}
 %<package> [2012/04/06 v1.1 Easy typesetting (potentially long) recipes with pictures]
-%<config>\ProvidesFile{xcookybooky.cfg}
-%<config> [2011/12/29 v1.0 'xcookybooky' configuration]
+%<config>\ProvidesFile{abcookbook.cfg}
+%<config> [2011/12/29 v1.0 'abcookbook' configuration]
 %
 %<*driver>
 \documentclass{ltxdoc}
 \usepackage[T1]{fontenc}
 \usepackage[latin1]{inputenc} 
 \usepackage{lmodern}
-\usepackage{xcookybooky}
+\usepackage{abcookbook}
 \usepackage{units}
 \usepackage{pdfpages}
 \EnableCrossrefs
@@ -39,8 +39,8 @@
 \setcounter{GlossaryColumns}{2}
 \usepackage{hyperref}
 \hypersetup{%
-    pdfauthor = {Sven Harder},
-    pdftitle = {xcookybooky documentation},
+    pdfauthor = {Matthew Caron},
+    pdftitle = {abcookbook documentation},
     colorlinks = {true},
     linkcolor = {blue},
     urlcolor = {blue},
@@ -48,7 +48,7 @@
     filecolor = {blue}
 }
 \begin{document}
-    \DocInput{xcookybooky.dtx}
+    \DocInput{abcookbook.dtx}
 \end{document}
 %</driver>
 % \fi
@@ -75,7 +75,7 @@
 % \changes{v1.0}{2011/12/29}{Initial version}
 % \changes{v1.1}{2012/04/06}{Load the non-free package 'emerald' per option. Possibility to change the picture width independently from the text columns}
 %
-% \GetFileInfo{xcookybooky.sty}
+% \GetFileInfo{abcookbook.sty}
 %
 % \DoNotIndex{\#,\$,\%,\&,\@,\\,\{,\},\^,\_,\~,\ ,\"}
 % \DoNotIndex{\@ne}
@@ -85,8 +85,8 @@
 % \DoNotIndex{\RequirePackage}
 % \DoNotIndex{\savekeys,\define,\setkeys,\define@key}
 %
-% \title{The \textsf{xcookybooky} package\thanks{This document
-% corresponds to \textsf{xcookybooky}~\fileversion,
+% \title{The \textsf{abcookbook} package\thanks{This document
+% corresponds to \textsf{abcookbook}~\fileversion,
 % dated \filedate.}}
 % \author{Sven Harder \\ \texttt{sven\_one1@gmx.de}}
 %
@@ -110,15 +110,15 @@
 % It looks very good, but I was unable to compile it correctly (e.g. I haven't got the Lucida fonts). Also there are some packages which have to be downloaded by hand, because there are not available at CTAN. Other handicaps are the missing possibility to create a PDF-file directly and a recipe cannot be longer than a single page.
 % So decided to take a look at the code. Step by step I replaced all critical parts. Finally it is now possible to write recipes much easier (at least in my opinion).
 % 
-% \section{Comparison between xcookybooky and cookybooky}
+% \section{Comparison between abcookbook and cookybooky}
 % 
-% There is no compatibility between xcookybooky and cookybooky, even the name is associating it. The reason for the naming is nearly similar design.
+% There is no compatibility between abcookbook and cookybooky, even the name is associating it. The reason for the naming is nearly similar design.
 %
-% A comparison between \texttt{xcookybooky} and \texttt{cookybooky} is shown in table \ref{tbl:comparison}.
+% A comparison between \texttt{abcookbook} and \texttt{cookybooky} is shown in table \ref{tbl:comparison}.
 % \begin{table}[htbp]
 %    \centering
 %    \begin{tabular}{rll}
-%        \textbf{Characteristic} & \textbf{xcookybooky} & \textbf{cookybooky}\\
+%        \textbf{Characteristic} & \textbf{abcookbook} & \textbf{cookybooky}\\
 %        Maximum recipe length & unlimited & 1 page\\
 %        Support missing pictures & yes & no\\
 %        Transparent background graphic & not part of package (see section \ref{sec:background}) & yes\\
@@ -126,7 +126,7 @@
 %        Support twoside option & only changing pictures above & full\\
 %        Generate recipe & environment & macro\\
 %    \end{tabular}
-%     \caption{Comparison between xcookybooky and cookybooky}
+%     \caption{Comparison between abcookbook and cookybooky}
 %     \label{tbl:comparison}
 % \end{table}
 % \newpage
@@ -421,9 +421,10 @@
 \DeclareOption{myconfig}
 {% load personal configuration
     \AtEndOfPackage{
-        \InputIfFileExists{xcookybooky.cfg}
-        {\PackageInfo{xcookybooky}{inputting 'xcookybooky.cfg'}}
-        {\PackageWarning{xcookybooky}{cannot find the configuration file 'xcookybooky.cfg'}}
+        \InputIfFileExists{abcookbook.cfg}
+        {\PackageInfo{abcookbook}{inputting 'abcookbook.cfg'}}
+        {\PackageWarning{abcookbook}{cannot find the configuration
+            file 'abcookbook.cfg'}}
     }
 }
 \ProcessOptions\relax
@@ -1165,7 +1166,7 @@
                         }
                     }
                     {% error message
-                        \PackageError{xcookybooky}
+                        \PackageError{abcookbook}
                         {There is no '\xcb@background@orientation' option for background picture orientation available!}
                         {The possible options are: default, pagecenter, textcenter or stockcenter}
                     }
