@@ -93,7 +93,11 @@
 % \maketitle
 %
 % \begin{abstract}
-% This package is made for typesetting recipes. You simply enter ingredients, preparation steps and get a beautiful recipe page. It is also possible to enter 2 pictures, which are displayes above the name of the recipe. Another option is to write a hint, which is displayed at the bottom.
+% This package is made for typesetting recipes. You simply enter
+% ingredients, preparation steps and get a beautiful recipe page. It
+% is also possible to enter 2 pictures, which are displayes above the
+% name of the recipe. Another option is to write a hint, which is
+% displayed at the bottom.
 % \end{abstract}
 %
 % \vspace{3em}
@@ -106,15 +110,26 @@
 %
 % \section{Introduction}
 %
-% When I was looking for template for recipes, I found the cookybooky package by Jürgen Gilg (http://www.ctan.org/tex-archive/macros/latex/contrib/cookybooky).
-% It looks very good, but I was unable to compile it correctly (e.g. I haven't got the Lucida fonts). Also there are some packages which have to be downloaded by hand, because there are not available at CTAN. Other handicaps are the missing possibility to create a PDF-file directly and a recipe cannot be longer than a single page.
-% So decided to take a look at the code. Step by step I replaced all critical parts. Finally it is now possible to write recipes much easier (at least in my opinion).
+% When I was looking for template for recipes, I found the cookybooky
+% package by Jürgen Gilg
+% (http://www.ctan.org/tex-archive/macros/latex/contrib/cookybooky).
+% It looks very good, but I was unable to compile it correctly (e.g. I
+% haven't got the Lucida fonts). Also there are some packages which
+% have to be downloaded by hand, because there are not available at
+% CTAN. Other handicaps are the missing possibility to create a
+% PDF-file directly and a recipe cannot be longer than a single page.
+% So decided to take a look at the code. Step by step I replaced all
+% critical parts. Finally it is now possible to write recipes much
+% easier (at least in my opinion).
 % 
 % \section{Comparison between abcookbook and cookybooky}
 % 
-% There is no compatibility between abcookbook and cookybooky, even the name is associating it. The reason for the naming is nearly similar design.
+% There is no compatibility between abcookbook and cookybooky, even
+% the name is associating it. The reason for the naming is nearly
+% similar design.
 %
-% A comparison between \texttt{abcookbook} and \texttt{cookybooky} is shown in table \ref{tbl:comparison}.
+% A comparison between \texttt{abcookbook} and \texttt{cookybooky} is
+% shown in table \ref{tbl:comparison}.
 % \begin{table}[htbp]
 %    \centering
 %    \begin{tabular}{rll}
@@ -132,10 +147,15 @@
 % \newpage
 %
 % \section{Usage}
-% First I want to explain the most important macros. After this you should be able to insert recipes. Afterwards some macros are shown, which allows you to modify the design (e.g. colors, headlines).
+% First I want to explain the most important macros. After this you
+% should be able to insert recipes. Afterwards some macros are shown,
+% which allows you to modify the design (e.g. colors, headlines).
 %
 % \DescribeEnv{recipe}
-% This the environment to insert recipes. Each recipe is included in a single enviroment. It is necessary to enter the name of the recipe. It is possible to insert also the recipetime, the portions, the calory content and the source (where you get this recipe).
+% This is the environment to insert recipes. Each recipe is included
+% in a single enviroment. It is necessary to enter the name of the
+% recipe. It is possible to insert also the recipetime, the portions,
+% the calorie content and the source (where you get this recipe).
 % 
 % Example:
 % \begin{verbatim}
@@ -152,9 +172,13 @@
 % \end{verbatim}
 %
 % \DescribeMacro{\graph}
-% It is possible to set 2 pictures by the macro \texttt{graph}. They are displayed above the other content. If no pictures are set, the space is used by the other content.
-% The \texttt{big} picture should be bigger than the \texttt{small} picture ;) but it also possible to modify this behaviour.
-% The reason for this is that the widths of the pictures are predefined by the command \texttt{setRecipeLengths}.
+% It is possible to set 2 pictures by the macro \texttt{graph}. They
+% are displayed above the other content. If no pictures are set, the
+% space is used by the other content.
+% The \texttt{big} picture should be bigger than the \texttt{small}
+% picture ;) but it also possible to modify this behaviour.
+% The reason for this is that the widths of the pictures are
+% predefined by the command \texttt{setRecipeLengths}.
 %
 % Example (simple):
 % \begin{verbatim}
@@ -164,7 +188,9 @@
 % }
 % \end{verbatim}
 %
-% Another possibility is shown in the following example. It is recommended if you only want to change the widths of the pictures for one recipe.
+% Another possibility is shown in the following example. It is
+% recommended if you only want to change the widths of the pictures
+% for one recipe.
 % \textbf{Note:} These values are one only used for one recipe.
 %
 % Example (extended):
@@ -178,8 +204,11 @@
 % \end{verbatim}
 %
 % \DescribeMacro{\ingredients}
-% Here the ingredients of your recipe are set. They should be entered by number (unit) \& ingredient. If the unit is a SI-Unit, it looks better if you use the \texttt{units} package instead of a blank.
-% In general there are two possible ways to insert ingredients, which are shown in the following examples.
+% Here the ingredients of your recipe are set. They should be entered
+% by number (unit) \& ingredient. If the unit is a SI-Unit, it looks
+% better if you use the \texttt{units} package instead of a blank.
+% In general there are two possible ways to insert ingredients, which
+% are shown in the following examples.
 %
 % Example (first method, my personal choice):
 % \begin{verbatim}
@@ -193,7 +222,9 @@
 % }
 % \end{verbatim}
 %
-% The difference is that the first way uses two columns. The second method uses three coumns. It is up to you to choose which one you prefer. 
+% The difference is that the first way uses two columns. The second
+% method uses three coumns. It is up to you to choose which one you
+% prefer. 
 %
 % Example (the alternative):
 % \begin{verbatim}
@@ -208,7 +239,9 @@
 % \end{verbatim}
 % 
 % \DescribeMacro{\preparation}
-% The preparation steps are inserted by this macro. Every step is written after \texttt{step} command. This is necessarry for the numeration.
+% The preparation steps are inserted by this macro. Every step is
+% written after \texttt{step} command. This is necessarry for the
+% numeration.
 %
 % Example:
 % \begin{verbatim}
@@ -221,10 +254,15 @@
 % \end{verbatim}
 %
 % \DescribeMacro{\portion}
-% This macro is intented as an interface for an equal formating of portions entries. For this it can be easily modified. You just have to renew this command.
+% This macro is intented as an interface for an equal formating of
+% portions entries. For this it can be easily modified. You just have
+% to renew this command.
 %
 % \DescribeMacro{\bakingtemperature}
-% This macro allows you to enter some bakingtemperatures. If you do not like the order of the temperatures you can change them by redefining the command. The temperatures are inserted as key/value pairs as known from the \texttt{xkeyval} package.
+% This macro allows you to enter some bakingtemperatures. If you do
+% not like the order of the temperatures you can change them by
+% redefining the command. The temperatures are inserted as key/value
+% pairs as known from the \texttt{xkeyval} package.
 %
 % Example (an entry in options of an recipe):
 % \begin{verbatim}
@@ -237,10 +275,15 @@
 % \end{verbatim}
 %
 % \subsection{Modify design}
-% The following macros can be used outside the recipe environment to choose your personal color etc.
+% The following macros can be used outside the recipe environment to
+% choose your personal color etc.
 %
 % \DescribeMacro{\setRecipeColors}
-% If you want to change the default colors, you can use \texttt{setRecipeColors}. The colors are set by <key~=~value> as known by the \texttt{xkeyval} package. The names of colors can be found in table \ref{tbl:colormanagement}. New colors can be easiliy defined by the \texttt{xcolor} package as shown the example below.
+% If you want to change the default colors, you can use
+% \texttt{setRecipeColors}. The colors are set by <key~=~value> as
+% known by the \texttt{xkeyval} package. The names of colors can be
+% found in table \ref{tbl:colormanagement}. New colors can be easiliy
+% defined by the \texttt{xcolor} package as shown the example below.
 % \begin{table}[htbp]
 %     \centering
 %     \begin{tabular}{rcl}
@@ -273,7 +316,9 @@
 % \end{samepage}
 %
 % \DescribeMacro{\setRecipeLengths}
-% By using the command \texttt{setRecipeLengths} it is possible to change the (default) values for the picture widths and the text column width.
+% By using the command \texttt{setRecipeLengths} it is possible to
+% change the (default) values for the picture widths and the text
+% column width.
 % 
 % Example:
 % \begin{verbatim}
@@ -287,7 +332,9 @@
 % \end{verbatim}
 %
 % \DescribeMacro{\setRecipeSizes}
-% The macro \texttt{setRecipeSizes} enables you to modify the fontsize of many parts of the recipe. The sizes are inserted by <key~=~value> (\texttt{xkeyval}).
+% The macro \texttt{setRecipeSizes} enables you to modify the fontsize
+% of many parts of the recipe. The sizes are inserted by <key~=~value>
+% (\texttt{xkeyval}).
 %
 % Example (these are the default values):
 % \begin{samepage}
@@ -305,7 +352,13 @@
 % \end{samepage}
 %
 % \DescribeMacro{\setRecipenameFont}
-% The name of recipe is displayed with a handwritten font by default. In my opinion it looks much better than a standard font. But if you want to change it you can use this macro. A well-arranged list of fonts can be found at \texttt{http://www.tug.dk/FontCatalogue/}. The other parameters are fontencoding, fontseries and fontshape. The size is changed by \texttt{setRecipeSizes}.
+% The name of recipe is displayed with a handwritten font by
+% default. In my opinion it looks much better than a standard
+% font. But if you want to change it you can use this macro. A
+% well-arranged list of fonts can be found at
+% \texttt{http://www.tug.dk/FontCatalogue/}. The other parameters are
+% fontencoding, fontseries and fontshape. The size is changed by
+% \texttt{setRecipeSizes}.
 %
 % Example (some fonts you could try out, requires option \texttt{handwritten}):
 % \begin{verbatim}
@@ -320,7 +373,9 @@
 %
 % \subsection{Translation}
 % \DescribeMacro{\setHeadlines}
-% \texttt{setHeadlines} allows to modify the default headlines. This is also needed for translations (The default values are german, sorry).
+% \texttt{setHeadlines} allows to modify the default headlines. This
+% is also needed for translations (The default values are german,
+% sorry).
 % The headlines are also inserted in <key~=~value> form.
 %
 % Example (a possible english translation):
@@ -341,17 +396,33 @@
 % This package provides three options which are explained in the following.
 % \begin{samepage}
 % \begin{itemize}
-%     \item \textbf{handwritten} This option requires the non-free package \texttt{emerald} and can only be used if your are not using TeX Live.
-%     \item \textbf{nowarnings} This options tries to eliminate all nasty warnings. Only important and interesting warnings are logged. This is in my opinion a good choice because the package \texttt{wrapfigure} generates a lot of warnings, see section \ref{sec:knownissues}.
-%     \item \textbf{myconfig} If you are using this package often or want to keep your main file 'clean' you can define your modfications in the configuration file. If you submit this option the file will be loaded otherwise \textbf{not}.
+%     \item \textbf{handwritten} This option requires the non-free
+%     package \texttt{emerald} and can only be used if your are not
+%     using TeX Live.
+%     \item \textbf{nowarnings} This options tries to eliminate all
+%     nasty warnings. Only important and interesting warnings are
+%     logged. This is in my opinion a good choice because the package
+%     \texttt{wrapfigure} generates a lot of warnings, see section
+%     \ref{sec:knownissues}.
+%     \item \textbf{myconfig} If you are using this package often or
+%     want to keep your main file 'clean' you can define your
+%     modfications in the configuration file. If you submit this
+%     option the file will be loaded otherwise \textbf{not}.
 % \end{itemize}
 % \end{samepage}
 %
 % \subsection{Background graphic}
 % \label{sec:background}
-% Inside this package there is only the option to set a background picture using the \texttt{setBackgroundPicture} macro. 
-% For creating transparent backgrounds I recommand \textbf{Inkscape}\footnote{http://inkscape.org/}. You just have to import a picture and reduce the opacity of the picture (I prefer \unit[22]{\%}).
-% The possible options for the orientation are: default, pagecenter, textcenter or stockcenter. To modify these orientations you have the possibility to change it manually by setting the \texttt{x} and \texttt{y} option (as shown below).
+% Inside this package there is only the option to set a background
+% picture using the \texttt{setBackgroundPicture} macro. 
+% For creating transparent backgrounds I recommand
+% \textbf{Inkscape}\footnote{http://inkscape.org/}. You just have to
+% import a picture and reduce the opacity of the picture (I prefer
+% \unit[22]{\%}).
+% The possible options for the orientation are: default, pagecenter,
+% textcenter or stockcenter. To modify these orientations you have the
+% possibility to change it manually by setting the \texttt{x} and
+% \texttt{y} option (as shown below).
 %
 % Example:
 % \begin{verbatim}
@@ -377,28 +448,45 @@
 %
 % \section{Troubleshooting}
 % \subsection{MiKTeX}
-% If you have problems with the used fonts (e.g. \texttt{cookingsymbols}) it might be necessary to refresh the database of MiKTeX.
+% If you have problems with the used fonts
+% (e.g. \texttt{cookingsymbols}) it might be necessary to refresh the
+% database of MiKTeX.
 %
 % \subsection{TeX Live}
-% If you are using this distribution you may should not use the option \texttt{handwritten}, because this option load the font package \texttt{emerald}.
+% If you are using this distribution you may should not use the option
+% \texttt{handwritten}, because this option load the font package
+% \texttt{emerald}.
 % This package is non-free and therefore not available in TeX Live.
 %
 % \section{Bugs}
-% If you found a bug, which is not described in the following section, feel free to write me an email. It can be found at the titlepage.
+% If you found a bug, which is not described in the following section,
+% feel free to write me an email. It can be found at the titlepage.
 %
 % \subsection{Known issues}
 % \label{sec:knownissues}
-% The \texttt{wrapfig} package has some problems with enumerations and the \texttt{lettrine} package. This is the reason, why some warnings are generated by compiling (the example). But nevertheless the results looks quite well, so I decided to ignore this issue.
-% By using \texttt{wrapfig} it is not possible to switch ingredients and preparation (the result looks really ugly). This is the reason, why the layout is not changed when setting the \texttt{twoside} option in the document class. I also tried \texttt{parcolumns} and \texttt{parallel}, but the results were disappointing. If you want to use this feature, you have to use \texttt{cookybooky}.
+% The \texttt{wrapfig} package has some problems with enumerations and
+% the \texttt{lettrine} package. This is the reason, why some warnings
+% are generated by compiling (the example). But nevertheless the
+% results looks quite well, so I decided to ignore this issue.
+% By using \texttt{wrapfig} it is not possible to switch ingredients
+% and preparation (the result looks really ugly). This is the reason,
+% why the layout is not changed when setting the \texttt{twoside}
+% option in the document class. I also tried \texttt{parcolumns} and
+% \texttt{parallel}, but the results were disappointing. If you want
+% to use this feature, you have to use \texttt{cookybooky}.
 %
-% Another limitation is the length of the ingredients. The maximum length is one page, because the \texttt{wrapfigure} package does not work with \texttt{longtable}. As a result no pagebreak in the ingredients is possible.
+% Another limitation is the length of the ingredients. The maximum
+% length is one page, because the \texttt{wrapfigure} package does not
+% work with \texttt{longtable}. As a result no pagebreak in the
+% ingredients is possible.
 % \StopEventually{\PrintIndex}
 %
 % \section{Implementation}
 % Let's have a look at the implementation.
 %
 % \subsection{Options}
-% You can use the option \texttt{myconfig} to load your personal configuration (file). See section \ref{sec:configuration}
+% You can use the option \texttt{myconfig} to load your personal
+% configuration (file). See section \ref{sec:configuration}
 %    \begin{macrocode}
 %<*package>
 \newif\ifHandwrittenFont@required
@@ -432,32 +520,45 @@
 %    \end{macrocode}
 %
 % \subsection{Required Packages}
-%  All needed packages are available at CTAN and as far as I know no general driver limitation are given.
+%  All needed packages are available at CTAN and as far as I know no
+%  general driver limitation are given.
 %    \begin{macrocode}
-\RequirePackage{tikz}                        % for creating the lines for the hint
+
+% for creating the lines for the hint
+\RequirePackage{tikz}
 \RequirePackage{graphicx}
 \RequirePackage{xcolor}
-\RequirePackage[clock, misc, weather]{ifsym} % Symbolpackage e.g. \Interval, \Wecker etc
-\RequirePackage{cookingsymbols}              % Cookings symbols e.g. \Oven, \Dish etc
+% Symbolpackage e.g. \Interval, \Wecker etc
+\RequirePackage[clock, misc, weather]{ifsym}
+% Cookings symbols e.g. \Oven, \Dish etc
+\RequirePackage{cookingsymbols}
 \ifHandwrittenFont@required
-    \RequirePackage{emerald}                 % Handwritten Fonts
+% Handwritten Fonts
+    \RequirePackage{emerald}
 \fi
-\RequirePackage{wrapfig}                     % To wrap the tabular with the ingredients
+% To wrap the tabular with the ingredients
+\RequirePackage{wrapfig}
 
 \RequirePackage{ifthen}
 \RequirePackage{xkeyval}
-\RequirePackage{lettrine}                    % numbering the preparation steps
+% numbering the preparation steps
+\RequirePackage{lettrine}
 \RequirePackage{fancyhdr}
 \RequirePackage{units}
-\RequirePackage{eso-pic}                     % for background pictures
-\RequirePackage{picture}                     % for modfifying the position of the bg pictures
+% for background pictures
+\RequirePackage{eso-pic}
+% for modfifying the position of the bg picturse
+\RequirePackage{picture}
 
 %    \end{macrocode}
 %
 % \subsection{Page Layout}
-% This will set up the page. It is optimized for the documentclass \texttt{article}. If you use a other package you probably have to modify this.
+% This will set up the page. It is optimized for the documentclass
+% \texttt{article}. If you use a other package you probably have to
+% modify this.
 %
-% \textbf{Note:} I tried to use the KOMA class \texttt{scrartcl}, but unfortunately some strange effects occured.
+% \textbf{Note:} I tried to use the KOMA class \texttt{scrartcl}, but
+% unfortunately some strange effects occured.
 %    \begin{macrocode}
 \setlength{\parindent}{0cm}
 \setlength{\parskip}{2ex plus 0.5ex}
@@ -479,8 +580,10 @@
 %    \end{macrocode}
 %
 % \begin{macro}{\recipesection}
-% The macro \texttt{recipesection} allows to modify the entry in the table of contents.
-% \textbf{Note:} If you modify the macro you may change the two upper lines as well.
+% The macro \texttt{recipesection} allows to modify the entry in the
+% table of contents.
+% \textbf{Note:} If you modify the macro you may change the two upper
+% lines as well.
 %    \begin{macrocode}
 \newcommand*{\recipesection}[2][]
 {%
@@ -518,7 +621,8 @@
 %    \end{macrocode}
 %
 % \begin{macro}{\setRecipeColors}
-% The parameter are set in the form "key~=~value" as known by the \texttt{xkeyval} package.
+% The parameter are set in the form "key~=~value" as known by the
+% \texttt{xkeyval} package.
 %    \begin{macrocode}
 \newcommand*{\setRecipeColors}[1]
 {%
@@ -568,7 +672,8 @@
 %    \end{macrocode}
 %
 % \begin{macro}{\setRecipeSizes}
-% The parameter are set in the form "key~=~value" as known by the \texttt{xkeyval} package.
+% The parameter are set in the form "key~=~value" as known by the
+% \texttt{xkeyval} package.
 %    \begin{macrocode}
 \newcommand*{\setRecipeSizes}[1]
 {
@@ -593,7 +698,9 @@
 %    \end{macrocode}
 %
 % \begin{macro}{\setRecipenameFont}
-% This macro sets the font for the name of the recipe. You have to insert the fontfamily, fontencoding, fontseries and fontshape. The size is set by the \texttt{sizeManagement}
+% This macro sets the font for the name of the recipe. You have to
+% insert the fontfamily, fontencoding, fontseries and fontshape. The
+% size is set by the \texttt{sizeManagement}
 %    \begin{macrocode}
 %% Handwritten fonts: hlce, pbsi, hlcw, fjd, fau
 %% Other fonts: fwb
@@ -612,7 +719,9 @@
 %    \end{macrocode}
 % \end{macro}
 %
-% This is the initialisation of the font for the recipename. The default is Computer Modern, because it is available on every \LaTeX{} distribution.
+% This is the initialisation of the font for the recipename. The
+% default is Computer Modern, because it is available on every
+% \LaTeX{} distribution.
 %    \begin{macrocode}
 \setRecipenameFont{cmr}{T1}{b}{n}
 
@@ -635,7 +744,8 @@
 %
 %
 % \begin{macro}{\step}
-% The command is used for numbering the steps of preparation. Take a look at the \texttt{lettrine} package for details.
+% The command is used for numbering the steps of preparation. Take a
+% look at the \texttt{lettrine} package for details.
 %    \begin{macrocode}
 \newcommand{\step}
 {%
@@ -691,7 +801,10 @@
 %    \end{macrocode}
 %
 % \begin{macro}{\setHeadlines}
-% This allows you to modify the headlines for the recipe parts. This also needed for translations (The default values are german, sorry). The parameter are set in the form "key~=~value" as known by the \texttt{xkeyval} package.
+% This allows you to modify the headlines for the recipe parts. This
+% also needed for translations (The default values are german,
+% sorry). The parameter are set in the form "key~=~value" as known by
+% the \texttt{xkeyval} package.
 %    \begin{macrocode}
 \newcommand*{\setHeadlines}[1]
 {%
@@ -718,7 +831,8 @@
 }
 
 %    \end{macrocode}
-% The values xcb@bigpicturewidth and xcb@smallpicturewidth are the default values.
+% The values xcb@bigpicturewidth and xcb@smallpicturewidth are the
+% default values.
 % They can be changed with the \texttt{graph} command.
 %    \begin{macrocode}
 \define@key{recipelengths}{preparationwidth}[0.60\textwidth]{\def\xcb@preparationwidth{#1}}
@@ -738,7 +852,9 @@
 %    \end{macrocode}
 %
 % \begin{macro}{\setRecipeLengths}
-% This command allows to modify most sizes of the recipe. The \texttt{pictureheight} is the height of the two pictures above the text.
+% This command allows to modify most sizes of the recipe. The
+% \texttt{pictureheight} is the height of the two pictures above the
+% text.
 %    \begin{macrocode}
 \newcommand*{\setRecipeLengths}[1]
 {%
@@ -766,7 +882,8 @@
         }
         {
             \vspace{-0.6cm}
-            \includegraphics[width=\linewidth, height = \xcb@pictureheight, keepaspectratio]{#1}
+            \includegraphics[width=\linewidth, height =
+              \xcb@pictureheight, keepaspectratio]{#1}
         }
     }
 }
@@ -779,7 +896,8 @@
         }
         {
             \vspace{-0.6cm}
-            \includegraphics[width=\linewidth, height = \xcb@pictureheight, keepaspectratio]{#1}
+            \includegraphics[width=\linewidth, height =
+              \xcb@pictureheight, keepaspectratio]{#1}
         }
     }
 }
@@ -794,7 +912,8 @@
 %    \end{macrocode}
 %
 % \begin{macro}{\portion}
-% This macro is for inserting the portions correctly. By renewing this command you can easiliy define your own design for the portions.
+% This macro is for inserting the portions correctly. By renewing this
+% command you can easiliy define your own design for the portions.
 %    \begin{macrocode}
 \newcommand*{\portion}[2][\xcb@name@portionvalue]{\unit[#2]{#1}}
 
@@ -802,7 +921,10 @@
 % \end{macro}
 %
 % \begin{macro}{\bakingtemperature}
-% This macro is used for inserting different bakingtemperatures. Only entered temperatures are displayed (with a symbol from \texttt{cookingsymbols} package). You can change the order of the temperatures by renew this command.
+% This macro is used for inserting different bakingtemperatures. Only
+% entered temperatures are displayed (with a symbol from
+% \texttt{cookingsymbols} package). You can change the order of the
+% temperatures by renew this command.
 %    \begin{macrocode}
 \define@key{bakingtemperature}{fanoven}[]{\def\xcb@bakingtemperature@fanoven{#1}}
 \define@key{bakingtemperature}{topbottomheat}[]{\def\xcb@bakingtemperature@topbottomheat{#1}}
@@ -814,7 +936,8 @@
 \newcommand*{\bakingtemperature}[1]
 {%
     \setboolean{xcb@bakingtemperature@firstentry}{true}%
-    \setkeys{bakingtemperature}{fanoven, topbottomheat, topheat, bottomheat, gasstove}%
+    \setkeys{bakingtemperature}{fanoven, topbottomheat, topheat,
+      bottomheat, gasstove}%
     \setkeys{bakingtemperature}{#1}%
 
     \ifthenelse{\equal{\xcb@bakingtemperature@fanoven}{}}%
@@ -827,7 +950,8 @@
     {}%
     {%
         \ifthenelse{\boolean{xcb@bakingtemperature@firstentry}}{\setboolean{xcb@bakingtemperature@firstentry}{false}}{, }%
-        \xcb@bakingtemperature@topbottomheat \ {\fontsize{14.5pt}{10pt}\Topbottomheat}%
+        \xcb@bakingtemperature@topbottomheat
+        \ {\fontsize{14.5pt}{10pt}\Topbottomheat}%
     }%
     \ifthenelse{\equal{\xcb@bakingtemperature@topheat}{}}%
     {}%
@@ -853,8 +977,10 @@
 %
 % \subsection{Recipe Environment}
 % \begin{environment}{recipe}
-% This the environment for inserting recipes. Inside you define your ingredients, preparation, pictures (graph) and maybe a hint.
-% The commands \texttt{xcb@cmd@myrecipeoverview} and \texttt{xcb@cmd@wrapfill} are intended for internal use only.
+% This the environment for inserting recipes. Inside you define your
+% ingredients, preparation, pictures (graph) and maybe a hint.
+% The commands \texttt{xcb@cmd@myrecipeoverview} and
+% \texttt{xcb@cmd@wrapfill} are intended for internal use only.
 %    \begin{macrocode}
 \newenvironment{recipe}[2][]
 {
@@ -896,7 +1022,8 @@
         {%
             \pagebreak[1]    % begin here a new page, if the space is small
             \begin{tikzpicture}[line width = 1.5pt, \xcb@color@hintline]
-                \useasboundingbox (0,0) -- ++(right:3.5cm) -- ++(up:3mm) -- ++(left:3.5cm) -- cycle;
+                \useasboundingbox (0,0) -- ++(right:3.5cm) --
+                ++(up:3mm) -- ++(left:3.5cm) -- cycle;
                 \draw (-3mm, 0mm) -- ++(right:3.5cm);
                 \draw (0, 3mm) -- ++(down:2.4cm);
             \end{tikzpicture}
@@ -927,11 +1054,14 @@
             {% not set => not shown
             }
             {
-                \xcb@name@bakingtime & \xcb@bakingtime\ifthenelse{\equal{\xcb@bakingtemperature}{}}
+                \xcb@name@bakingtime &
+                \xcb@bakingtime\ifthenelse{\equal{\xcb@bakingtemperature}{}}
                 {
                     \\
                 }
-                {,\hspace{1em} \xcb@name@bakingtemperature \hspace{1ex} \xcb@bakingtemperature\\
+                {,\hspace{1em}
+                  \xcb@name@bakingtemperature \hspace{1ex}
+                  \xcb@bakingtemperature\\
                 }
             }
             \ifthenelse{\equal{\xcb@portion}{}}
@@ -956,7 +1086,11 @@
     }
 
 %    \end{macrocode}
-% The following command is needed, if more ingredients than preparation (steps) are inserted. In this case the \texttt{wrapfigure} package behaves in a strange way. The result is that the hint is also floating around the ingredients, although the "box" is already closed. This command repairs this effect.
+% The following command is needed, if more ingredients than
+% preparation (steps) are inserted. In this case the
+% \texttt{wrapfigure} package behaves in a strange way. The result is
+% that the hint is also floating around the ingredients, although the
+% "box" is already closed. This command repairs this effect.
 % It is taken from http://mizine.de/latex/wrapfigure-austricksen/
 %    \begin{macrocode}    
     \newcommand\xcb@cmd@wrapfill
@@ -974,8 +1108,11 @@
     
     
     % initialisation
-    \setkeys{recipe}{preparationtime, bakingtime, bakingtemperature, portion, calory, source}
-    \setkeys{picture}{small, big, smallpicturewidth=\xcb@smallpicturewidth, bigpicturewidth=\xcb@bigpicturewidth} % load the default values
+    \setkeys{recipe}{preparationtime, bakingtime, bakingtemperature,
+      portion, calory, source}
+    \setkeys{picture}{small, big,
+      smallpicturewidth=\xcb@smallpicturewidth,
+      bigpicturewidth=\xcb@bigpicturewidth} % load the default values
     \ingredients{}
     \preparation{}
     \def\xcb@hint{}
@@ -1062,7 +1199,8 @@
 \fancyfoot[C]{\@newpagehint{foot}}
 
 %    \end{macrocode}
-% Below the counter for the header and the footer are defined and initialised.
+% Below the counter for the header and the footer are defined and
+% initialised.
 %    \begin{macrocode}
 \newcounter{xcb@newpagehead}
 \setcounter{xcb@newpagehead}{0}
@@ -1070,7 +1208,8 @@
 \setcounter{xcb@newpagefoot}{0}
 %    \end{macrocode}
 % \begin{macro}{\@newpagehint}
-% This macro is used to create a hint in the head or foot of the page, that the recipe is longer than one page.
+% This macro is used to create a hint in the head or foot of the page,
+% that the recipe is longer than one page.
 %    \begin{macrocode}
 \newcommand*{\@newpagehint}[1]
 {
@@ -1087,7 +1226,8 @@
         {
             \xcb@name@continuationfoot
         }
-        {% if no message at the bottom is set, there is no need for a message on the next page
+        {% if no message at the bottom is set, there is no need for a
+         % message on the next page
             \setcounter{xcb@newpagehead}{0}
         }
     }
@@ -1114,7 +1254,10 @@
 
 %    \end{macrocode}
 % \begin{macro}{\setBackgroundPicture}
-% This macro is intended to set easily a (transparent) background. The command uses the \texttt{eso-pic} package. If the implemented options are not satisfying you, you may take a look at the documentation of \texttt{eso-pic} when redefining this command.
+% This macro is intended to set easily a (transparent) background. The
+% command uses the \texttt{eso-pic} package. If the implemented
+% options are not satisfying you, you may take a look at the
+% documentation of \texttt{eso-pic} when redefining this command.
 %    \begin{macrocode}
 \newcommand*{\setBackgroundPicture}[2][]
 {%
@@ -1130,7 +1273,9 @@
                 \parbox[b][\xcb@background@height]{\xcb@background@width}
                 {%
                     \vfill
-                    \includegraphics[width=\xcb@background@width, height=\xcb@background@height, keepaspectratio]{#2}%
+                    \includegraphics[width=\xcb@background@width,
+                      height=\xcb@background@height,
+                      keepaspectratio]{#2}%
                     \vfill
                 }
             }
@@ -1141,7 +1286,9 @@
                 \AtPageCenter{%
                     \makebox(\xcb@background@x, \xcb@background@y)[c]
                     {%
-                        \includegraphics[width=\xcb@background@width, height=\xcb@background@height, keepaspectratio]{#2}
+                        \includegraphics[width=\xcb@background@width,
+                          height=\xcb@background@height,
+                          keepaspectratio]{#2}
                     }
                 }
             }
@@ -1151,7 +1298,9 @@
                     \AtTextCenter{%
                         \makebox(\xcb@background@x, \xcb@background@y)[c]
                         {%
-                            \includegraphics[width=\xcb@background@width, height=\xcb@background@height, keepaspectratio]{#2}
+                            \includegraphics[width=\xcb@background@width,
+                              height=\xcb@background@height,
+                              keepaspectratio]{#2}
                         }
                     }
                 }
@@ -1161,14 +1310,19 @@
                         \AtStockCenter{%
                             \makebox(\xcb@background@x, \xcb@background@y)[c]
                             {%
-                                \includegraphics[width=\xcb@background@width, height=\xcb@background@height, keepaspectratio]{#2}
+                                \includegraphics[width=\xcb@background@width,
+                                  height=\xcb@background@height,
+                                  keepaspectratio]{#2}
                             }
                         }
                     }
                     {% error message
                         \PackageError{abcookbook}
-                        {There is no '\xcb@background@orientation' option for background picture orientation available!}
-                        {The possible options are: default, pagecenter, textcenter or stockcenter}
+                        {There is no '\xcb@background@orientation'
+                          option for background picture orientation
+                          available!}
+                        {The possible options are: default,
+                          pagecenter, textcenter or stockcenter}
                     }
                 }
             }
@@ -1182,7 +1336,10 @@
 %
 % \subsection{Configuration file}
 % \label{sec:configuration}
-% This file is intended to change the design central. The most important commands are already written down. You have to submit the option \texttt{myconfig}, if you want to load the configuration file.
+% This file is intended to change the design central. The most
+% important commands are already written down. You have to submit the
+% option \texttt{myconfig}, if you want to load the configuration
+% file.
 %    \begin{macrocode} 
 %<*config>
 %% Change Layout
