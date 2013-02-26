@@ -399,9 +399,6 @@
 % This package provides three options which are explained in the following.
 % \begin{samepage}
 % \begin{itemize}
-%     \item \textbf{handwritten} This option requires the non-free
-%     package \texttt{emerald} and can only be used if your are not
-%     using TeX Live.
 %     \item \textbf{nowarnings} This options tries to eliminate all
 %     nasty warnings. Only important and interesting warnings are
 %     logged. This is in my opinion a good choice because the package
@@ -454,12 +451,6 @@
 % If you have problems with the used fonts
 % (e.g. \texttt{cookingsymbols}) it might be necessary to refresh the
 % database of MiKTeX.
-%
-% \subsection{TeX Live}
-% If you are using this distribution you may should not use the option
-% \texttt{handwritten}, because this option load the font package
-% \texttt{emerald}.
-% This package is non-free and therefore not available in TeX Live.
 %
 % \section{Bugs}
 % If you found a bug, which is not described in the following section,
@@ -535,10 +526,6 @@
 \RequirePackage[clock, misc, weather]{ifsym}
 % Cookings symbols e.g. \Oven, \Dish etc
 \RequirePackage{cookingsymbols}
-\ifHandwrittenFont@required
-% Handwritten Fonts
-    \RequirePackage{emerald}
-\fi
 % To wrap the tabular with the ingredients
 \RequirePackage{wrapfig}
 
