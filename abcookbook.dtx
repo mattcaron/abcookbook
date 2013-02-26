@@ -509,6 +509,37 @@
             file 'abcookbook.cfg'}}
     }
 }
+\DeclareOption{mono}
+{% monochrome colors
+  \AtEndOfPackage{
+    \setRecipeColors{
+      recipename = black,
+      ing = black,
+      inghead = black,
+      equip = black,
+      equiphead = black,
+      prep = black,
+      hint = black,
+      hinthead = black,
+      hintline = black,
+      numeration = black,
+    }
+  }
+}
+\DeclareOption{english}
+{% english language
+  \AtEndOfPackage{
+    \setHeadlines{
+      inghead = Ingredients,
+      equiphead = Equipment,
+      prephead = Preparation,
+      hinthead = Hint,
+      calorie = energy content,
+      continuationhead = Continuation,
+      continuationfoot = Continuation on next page
+    }
+  }
+}
 \ProcessOptions\relax
 
 %    \end{macrocode}
