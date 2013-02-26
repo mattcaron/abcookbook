@@ -290,6 +290,7 @@
 %         recipename & green & recipe name\\
 %         ing    & gray    & ingredients (text)\\
 %         inghead & gray & headline of the ingredients\\
+%         equiphead & gray & headline of the equipment\\
 %         prep    & black    & preparation (text)\\
 %         prephead & black & headline of the preparation\\
 %         hint    & red    & hint (text)\\
@@ -342,6 +343,8 @@
 %     recipename = \fontsize{25pt}{30pt},
 %     ing = \normalsize,
 %     inghead = \normalsize,
+%     equip = \normalsize,
+%     equiphead = \normalsize,
 %     prep = \normalsize,
 %     prephead = \normalsize,
 %     hint = \normalsize,
@@ -381,6 +384,7 @@
 % \begin{verbatim}
 % \setHeadlines{
 %     inghead = Ingredients,
+%     equiphead = Equipment,
 %     prephead = Preparation,
 %     hinthead = Hint,
 %     calorie = energy content,
@@ -598,6 +602,8 @@
 \define@key{colorManagement}{recipename}[green]{\def\xcb@color@recipename{#1}}
 \define@key{colorManagement}{ing}[gray]{\def\xcb@color@ing{#1}}
 \define@key{colorManagement}{inghead}[gray]{\def\xcb@color@inghead{#1}}
+\define@key{colorManagement}{equip}[gray]{\def\xcb@color@equip{#1}}
+\define@key{colorManagement}{equiphead}[gray]{\def\xcb@color@equiphead{#1}}
 \define@key{colorManagement}{prep}[black]{\def\xcb@color@prep{#1}}
 \define@key{colorManagement}{prephead}[black]{\def\xcb@color@prephead{#1}}
 \define@key{colorManagement}{hint}[black]{\def\xcb@color@hint{#1}}
@@ -609,6 +615,8 @@
     recipename,   % color of recipename
     ing,          % color of ingredients (text)
     inghead,      % color of headline of ingredients
+    equip,        % color of equipment (text)
+    equiphead,    % color of headline of equipment
     prep,         % color of preparation (text)
     prephead,     % color of headline of preparation
     hint,         % color of hint (text)
@@ -638,6 +646,8 @@
     recipename,
     ing,
     inghead,
+    equip,
+    equiphead,
     prep,
     prephead,
     hint,
@@ -653,6 +663,8 @@
 \define@key{sizeManagement}{recipename}[\fontsize{25pt}{30pt}]{\def\xcb@fontsize@recipename{#1}}
 \define@key{sizeManagement}{ing}[\normalsize]{\def\xcb@fontsize@ing{#1}}
 \define@key{sizeManagement}{inghead}[\normalsize]{\def\xcb@fontsize@inghead{#1}}
+\define@key{sizeManagement}{equip}[\normalsize]{\def\xcb@fontsize@equip{#1}}
+\define@key{sizeManagement}{equiphead}[\normalsize]{\def\xcb@fontsize@equiphead{#1}}
 \define@key{sizeManagement}{prep}[\normalsize]{\def\xcb@fontsize@prep{#1}}
 \define@key{sizeManagement}{prephead}[\normalsize]{\def\xcb@fontsize@prephead{#1}}
 \define@key{sizeManagement}{hint}[\normalsize]{\def\xcb@fontsize@hint{#1}}
@@ -662,6 +674,8 @@
     recipename,
     ing,
     inghead,
+    equip,
+    equiphead,
     prep,
     prephead,
     hint,
@@ -688,6 +702,8 @@
     recipename,
     ing,
     inghead,
+    equip,
+    equiphead,
     prep,
     prephead,
     hint,
@@ -767,6 +783,9 @@
 \define@key{headlines}{inghead}[Zutaten]{
     \def\xcb@name@inghead{\textcolor{\xcb@color@inghead}{\textbf{\xcb@fontsize@inghead{#1}}\ }}
 }
+\define@key{headlines}{equiphead}[Ausrüstung]{
+    \def\xcb@name@equiphead{\textcolor{\xcb@color@equiphead}{\textbf{\xcb@fontsize@equiphead{#1}}\ }}
+}
 \define@key{headlines}{prephead}[Zubereitung]{
     \def\xcb@name@prephead{\textcolor{\xcb@color@prephead}{\textbf{\xcb@fontsize@prephead{#1}}\ }}
 }
@@ -780,11 +799,12 @@
 \define@key{headlines}{bakingtemperature}[\Thermo{4}]{\def\xcb@name@bakingtemperature{#1}}
 \define@key{headlines}{portion}[\fontsize{14.5pt}{10pt}\Dish]{\def\xcb@name@portion{#1}}
 \define@key{headlines}{portionvalue}[Personen]{\def\xcb@name@portionvalue{#1}}
-\define@key{headlines}{calory}[Brennwert]{\def\xcb@name@calory{#1}}
+\define@key{headlines}{calorie}[Brennwert]{\def\xcb@name@calorie{#1}}
 \define@key{headlines}{source}[\PaperPortrait]{\def\xcb@name@source{#1}}
 \savekeys{headlines}
 {
     inghead,
+    equiphead,
     prephead,
     hinthead,
     continuationhead,
@@ -816,6 +836,7 @@
 \setHeadlines
 {% initialisation
     inghead,
+    equiphead,
     prephead,
     hinthead,
     continuationhead,
@@ -998,9 +1019,28 @@
             %\\[4pt]
             \\[1em]
             \xcb@fontsize@ing\color{\xcb@color@ing}
-            \begin{tabular}{rll}
+            \textbf{
+              \begin{tabular}{rll}
                 ##1
-            \end{tabular}
+              \end{tabular}
+            }
+        }
+    }
+
+    \newcommand*{\equipment}[1]
+    {%
+        \def\xcb@equipment
+        {%
+            % \vspace{-1em}    % same height of ingredients and preparation
+            \xcb@name@equiphead
+            %\\[4pt]
+            \\[1em]
+            \xcb@fontsize@equip\color{\xcb@color@equip}
+            \textbf{
+              \begin{tabular}{rll}
+                ##1
+              \end{tabular}
+            }
         }
     }
     
@@ -1113,6 +1153,7 @@
       smallpicturewidth=\xcb@smallpicturewidth,
       bigpicturewidth=\xcb@bigpicturewidth} % load the default values
     \ingredients{}
+    \equipment{}
     \preparation{}
     \def\xcb@hint{}
     
@@ -1161,6 +1202,9 @@
     \begin{wraptable}{r}{\xcb@ingredientswidth}
     {
         \xcb@ingredients
+        \\
+        \\
+        \xcb@equipment
     }
     \end{wraptable}
     \xcb@preparation
@@ -1347,6 +1391,8 @@
     recipename,
     ing,
     inghead,
+    equip,
+    equiphead,
     prep,
     prephead,
     hint,
@@ -1360,6 +1406,8 @@
     recipename,
     ing,
     inghead,
+    equip,
+    equiphead,
     prep,
     prephead,
     hint,
@@ -1380,6 +1428,7 @@
 \setHeadlines
 {%
     inghead,
+    equiphead,
     prephead,
     hinthead,
     continuationhead,
