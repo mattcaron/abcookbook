@@ -1,40 +1,48 @@
-'xcookybooky' is a package for entering recipes
-and layout them in a nice way. This package is
-based on the 'cookybooky' package by Jürgen Gilg.
-Unfortunately it uses some special packages and
-fonts. Another handicap is the missing possibility to
-create a PDF directly. This limitations are reversed.
+'abcookbook' is a package for entering recipes in a style inspired by
+Alton Brown's cookbooks. The notable difference between this style and
+a more conventional style is that Mr. Brown refers to ingredients as
+"Software", and adds another section called "Hardware", describing any
+equipment necessary. In this version, I've retained a more
+conventional "Ingredints" and "Equipment" nomenclature, but still
+added the extra "Equipment" section. After all, if you're making
+something which needs a 9" pie pan, you'd like to know before
+starting. I've also tweaked the color scheme a bit to work well on
+monochrome printers.
 
-As a result of the changes not all options known
-from 'cookybooky' are implemented in this package.
-But nevertheless it provides some new options, e.g.
-an improved color and fontsize management and more
+This package is based on 'xcookybooky' by Sven Harder, which is, in
+turn, based on the 'cookybooky' package by Jürgen Gilg.  Unfortunately
+it uses some special packages and fonts. Another handicap is the
+missing possibility to create a PDF directly. This limitations are
+reversed.
+
+As a result of the changes not all options known from 'cookybooky' are
+implemented in this package.  But nevertheless it provides some new
+options, e.g.  an improved color and fontsize management and more
 recipe fields.
 
 
 Usage
 ----------------------------------
-The recipes are inserted in a environment. There is
-the possibility to enter ingredients, preparation (steps),
-(two) pictures and a hint. Also there is an option
-to insert the recipetime, bakingtime, portions, calory
-content and source of the recipe (internet, friends,
-neighbours etc.).
-
+The recipes are inserted in a environment. There is the possibility to
+enter ingredients, preparation (steps), (two) pictures and a
+hint. Also there is an option to insert the recipe time, baking time,
+portions, calorie content and source of the recipe (internet, friends,
+neighbors etc.).
 
 Package contents
 ----------------------------------
-The current distribution is zipped up as
-    'xcookybooky.zip'
-and includes the following files
-    'xcookybooky.ins',
-    'xcookybooky.dtx',
-	'xcookybooky.pdf',
+The current distribution includes the following files
+    'abcookbook.ins',
+    'abcookbook.dtx',
+    'abcookbook.pdf',
     'README'.
 Also there is a folder including an example, which
 helps you (hopefully) to understand the usage of this
 package.
 
+To generate a .sty file, run:
+
+latex abcookbook.ins
 
 License
 ----------------------------------
@@ -48,4 +56,4 @@ http://www.latex-project.org/lppl.txt
 
 Current maintainer
 ----------------------------------
-Sven Harder
+Matthew Caron
