@@ -163,7 +163,7 @@
 %     bakingtime = 1 hour,
 %     bakingtemperature = \unit[225]{°C},
 %     portion = 4 portions,
-%     calory = 4 kj,
+%     calorie = 4 kj,
 %     source = My neighbour Sarah
 % ]{Currywurst}
 % ...
@@ -383,7 +383,7 @@
 %     inghead = Ingredients,
 %     prephead = Preparation,
 %     hinthead = Hint,
-%     calory = energy content,
+%     calorie = energy content,
 %     continuationhead = Continuation,
 %     continuationfoot = Continuation on next page
 % }
@@ -794,7 +794,7 @@
     bakingtemperature,
     portion,
     portionvalue,
-    calory,
+    calorie,
     source
 }
 %    \end{macrocode}
@@ -825,7 +825,7 @@
     bakingtemperature,
     portion,
     portionvalue,
-    calory,
+    calorie,
     source
 }
 
@@ -905,7 +905,7 @@
 \define@key{recipe}{bakingtime}[]{\def\xcb@bakingtime{#1}}
 \define@key{recipe}{bakingtemperature}[]{\def\xcb@bakingtemperature{#1}}
 \define@key{recipe}{portion}[]{\def\xcb@portion{#1}}
-\define@key{recipe}{calory}[]{\def\xcb@calory{#1}}
+\define@key{recipe}{calorie}[]{\def\xcb@calorie{#1}}
 \define@key{recipe}{source}[]{\def\xcb@source{#1}}
 
 %    \end{macrocode}
@@ -1069,11 +1069,11 @@
             {
                 \xcb@name@portion & \xcb@portion\\
             }
-            \ifthenelse{\equal{\xcb@calory}{}}
+            \ifthenelse{\equal{\xcb@calorie}{}}
             {% not set => not shown
             }
             {
-                \xcb@name@calory & \xcb@calory\\
+                \xcb@name@calorie & \xcb@calorie\\
             }
             \ifthenelse{\equal{\xcb@source}{}}
             {% not set => not shown
@@ -1108,7 +1108,7 @@
     
     % initialisation
     \setkeys{recipe}{preparationtime, bakingtime, bakingtemperature,
-      portion, calory, source}
+      portion, calorie, source}
     \setkeys{picture}{small, big,
       smallpicturewidth=\xcb@smallpicturewidth,
       bigpicturewidth=\xcb@bigpicturewidth} % load the default values
@@ -1389,7 +1389,7 @@
     bakingtemperature,
     portion,
     portionvalue,
-    calory,
+    calorie,
     source
 }
 %</config>
